@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reel – Movie search</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <h1 id="page-title">What are we watching tonight?</h1>
+
+      <div class="search-box" id="search-box">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Try Interstellar, Parasite or Spirited Away"
+          aria-label="Movie title"
+          autocomplete="off"
+        >
+        <button type="button" id="search-btn">Search</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="results">
+    <!-- Optional: use this for "Loading...", "No movie found", errors, etc. -->
+    <p id="status-message"></p>
+
+    <!-- Your JS will fill this div with movie-div blocks -->
+    <div id="movies-container">
+
+      <!-- ===== One movie-div (sample). Duplicate this block for each movie, then delete this sample. ===== -->
+      <article class="movie-div">
+        <div class="movie-poster-wrap">
+          <!-- Set the src (and alt) from your JS. The 1px gif just keeps the empty state clean. -->
+          <img
+            class="movie-poster"
+            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+            alt="Poster for Interstellar"
+          >
+        </div>
+
+        <div class="movie-main">
+          <h2 class="movie-title">Interstellar</h2>
+
+          <div class="movie-meta">
+            <span class="movie-year">2014</span>
+            <span class="movie-genre">Adventure, Drama, Sci-Fi</span>
+          </div>
+
+          <p class="movie-plot">
+            With Earth running out of food, a former pilot joins a crew that travels through a
+            wormhole to find humanity a new home, at the cost of time with his family.
+          </p>
+        </div>
+
+        <div class="movie-stub">
+          <span class="stub-label">IMDb</span>
+          <span class="movie-rating">8.7</span>
+          <span class="stub-scale">out of 10</span>
+        </div>
+      </article>
+      <!-- ===== end of sample movie-div ===== -->
+
+    </div>
+  </main>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
