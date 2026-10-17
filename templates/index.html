@@ -37,42 +37,54 @@
     <!-- Your JS will fill this div with movie-div blocks -->
     <div id="movies-container">
 
-      <!-- ===== One movie-div (sample). Duplicate this block for each movie, then delete this sample. ===== -->
-      <article class="movie-div">
+      <!--
+        HOW IT WORKS
+        - Every .movie-div starts collapsed: it shows only poster, title, type and year.
+        - Add the class "expanded" to a .movie-div (on click, in your JS) to reveal
+          genre, plot and the IMDb rating. Remove the class to collapse it again.
+        - Delete the two samples below once your JS builds the cards.
+      -->
+
+      <!-- ===== Sample 1: collapsed (default state) ===== -->
+      <article class="movie-div" tabindex="0">
         <div class="movie-poster-wrap">
-          <!-- Set the src (and alt) from your JS. The 1px gif just keeps the empty state clean. -->
           <img
             class="movie-poster"
             src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-            alt="Poster for Interstellar"
+            alt="Poster for Parasite"
           >
         </div>
 
         <div class="movie-main">
-          <h2 class="movie-title">Interstellar</h2>
+          <h2 class="movie-title">Parasite</h2>
 
           <div class="movie-meta">
-            <span class="movie-year">2014</span>
-            <span class="movie-genre">Adventure, Drama, Sci-Fi</span>
+            <span class="movie-type">movie</span>
+            <span class="movie-year">2019</span>
           </div>
 
-          <p class="movie-plot">
-            With Earth running out of food, a former pilot joins a crew that travels through a
-            wormhole to find humanity a new home, at the cost of time with his family.
-          </p>
+          <!-- Hidden until .expanded is added -->
+          <div class="movie-details">
+            <p class="movie-genre">Comedy, Drama, Thriller</p>
+            <p class="movie-plot">
+              A poor family slowly worms its way into the household of a wealthy one,
+              until a hidden secret threatens to unravel everything.
+            </p>
+          </div>
         </div>
 
+        <!-- Hidden until .expanded is added -->
         <div class="movie-stub">
           <span class="stub-label">IMDb</span>
-          <span class="movie-rating">8.7</span>
+          <span class="movie-rating">8.5</span>
           <span class="stub-scale">out of 10</span>
         </div>
       </article>
-      <!-- ===== end of sample movie-div ===== -->
+
+      
 
     </div>
   </main>
-
-  <script src="/static/script.js"></script>
+<script src="/static/script.js"></script>
 </body>
 </html>
