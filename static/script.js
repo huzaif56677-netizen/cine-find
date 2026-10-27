@@ -126,6 +126,8 @@ async function showMovieDetails(imdbID, movie){
     //     return;
     // }
     
+    console.log(movie);
+    
    const details_response =  await fetch(`/movies/details?imdbID=${encodeURIComponent(imdbID)}`);
    try{
     if(! details_response.ok){
@@ -141,7 +143,14 @@ async function showMovieDetails(imdbID, movie){
         }
         else{
             statusmessageele.innerText = '';
+            const movieselected = document.querySelector('.movie-div.expanded');
+            if(movieselected && movieselected !== movie){
+                movieselected.classList.remove('expanded');
+            }
+        
             movie.classList.toggle('expanded');
+            
+           
             // moviegenreele.innerText = `${detailed_data.Genre}`;
             // movieplotele.innerText = `${detailed_data.Plot}`;
             // movieratingele.innerText =`${detailed_data.imdbRating}`;
